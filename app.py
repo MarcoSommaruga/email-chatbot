@@ -12,3 +12,4 @@ if query:
     st.write(f"🔍 Cerco email per: '{query}'")
     # Qui integreremo: retrieval + generazione
     st.info("⚙️ Funzionalità in sviluppo...")
+
