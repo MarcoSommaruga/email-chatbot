@@ -3,3 +3,4 @@ __pycache__/
 *.pyc 
 data/
 credentials.json
+token.json
