@@ -8,7 +8,7 @@ logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
     handlers=[
-        logging.FileHandler("./logging/create_embeddings.log", encoding="utf-8"),
+        logging.FileHandler("./log/logs/create_embeddings.log", encoding="utf-8"),
         logging.StreamHandler()
     ]
 )

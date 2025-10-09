@@ -1,0 +1,64 @@
+2025-10-09 23:38:16,340 [INFO] Avvio dell'applicazione Chatbot Email.
+2025-10-09 23:38:16,341 [ERROR] Errore nell'esecuzione dell'applicazione principale: No module named 'retriever'
+Traceback (most recent call last):
+  File "C:\Users\UGA06690\Desktop\LAVORO\MYENV\chatbot-email\retriever\src\__init__.py", line 13, in main
+    from retriever.src.search import main as search_main
+ModuleNotFoundError: No module named 'retriever'
+2025-10-09 23:39:12,702 [INFO] Avvio dell'applicazione Chatbot Email.
+2025-10-09 23:39:19,994 [ERROR] Errore nell'esecuzione dell'applicazione principale: No module named 'log'
+Traceback (most recent call last):
+  File "C:\Users\UGA06690\Desktop\LAVORO\MYENV\chatbot-email\retriever\src\__init__.py", line 13, in main
+    from search import main as search_main
+  File "C:\Users\UGA06690\Desktop\LAVORO\MYENV\chatbot-email\retriever\src\search.py", line 4, in <module>
+    from log.src.log_utils import LogManager
+ModuleNotFoundError: No module named 'log'
+2025-10-09 23:41:18,472 [INFO] Avvio dell'applicazione Chatbot Email.
+2025-10-09 23:41:29,671 [ERROR] Errore nell'esecuzione dell'applicazione principale: No module named 'log'
+Traceback (most recent call last):
+  File "C:\Users\UGA06690\Desktop\LAVORO\MYENV\chatbot-email\retriever\src\__init__.py", line 13, in main
+    from search import main as search_main
+  File "C:\Users\UGA06690\Desktop\LAVORO\MYENV\chatbot-email\retriever\src\search.py", line 5, in <module>
+    from log.src.log_utils import LogManager
+ModuleNotFoundError: No module named 'log'
+2025-10-09 23:42:21,769 [INFO] Avvio dell'applicazione Chatbot Email.
+2025-10-09 23:42:29,381 [ERROR] Errore nell'esecuzione dell'applicazione principale: No module named 'log'
+Traceback (most recent call last):
+  File "C:\Users\UGA06690\Desktop\LAVORO\MYENV\chatbot-email\retriever\src\__init__.py", line 13, in main
+    from search import main as search_main
+  File "C:\Users\UGA06690\Desktop\LAVORO\MYENV\chatbot-email\retriever\src\search.py", line 5, in <module>
+    from log.src.log_utils import LogManager
+ModuleNotFoundError: No module named 'log'
+2025-10-09 23:43:11,887 [INFO] Avvio dell'applicazione Chatbot Email.
+2025-10-09 23:43:20,010 [ERROR] Errore nell'esecuzione dell'applicazione principale: No module named 'log'
+Traceback (most recent call last):
+  File "C:\Users\UGA06690\Desktop\LAVORO\MYENV\chatbot-email\retriever\src\__init__.py", line 13, in main
+    from search import main as search_main
+  File "C:\Users\UGA06690\Desktop\LAVORO\MYENV\chatbot-email\retriever\src\search.py", line 5, in <module>
+    from log.src.log_utils import LogManager
+ModuleNotFoundError: No module named 'log'
+2025-10-09 23:43:36,642 [INFO] Avvio dell'applicazione Chatbot Email.
+2025-10-09 23:43:46,026 [INFO] Chiamata al modulo di ricerca.
+2025-10-09 23:44:14,241 [INFO] Avvio modulo search: similarità query-emails.
+2025-10-09 23:44:23,334 [INFO] Chiamata al modulo di ricerca.
+2025-10-09 23:46:52,806 [INFO] Avvio modulo search: similarità query-emails.
+2025-10-09 23:47:00,912 [INFO] Chiamata al modulo di ricerca.
+2025-10-09 23:47:39,571 [INFO] Avvio modulo search: similarità query-emails.
+2025-10-09 23:47:48,046 [INFO] Chiamata al modulo di ricerca.
+2025-10-09 23:48:47,434 [INFO] Avvio modulo search: similarità query-emails.
+2025-10-09 23:48:55,542 [INFO] Chiamata al modulo di ricerca.
+2025-10-09 23:49:39,397 [INFO] Avvio modulo search: similarità query-emails.
+2025-10-09 23:49:50,664 [INFO] Chiamata al modulo di ricerca.
+2025-10-09 23:51:15,878 [INFO] Avvio modulo search: similarità query-emails.
+2025-10-09 23:51:24,081 [INFO] Chiamata al modulo di ricerca.
+2025-10-09 23:53:19,264 [INFO] Avvio modulo search: similarità query-emails.
+2025-10-09 23:53:27,167 [INFO] Chiamata al modulo di ricerca.
+2025-10-09 23:54:20,029 [INFO] Avvio modulo search: similarità query-emails.
+2025-10-09 23:55:08,159 [INFO] Chiamata al modulo di ricerca.
+2025-10-09 23:58:18,924 [INFO] Avvio modulo search: similarità query-emails.
+2025-10-09 23:58:28,387 [INFO] Chiamata al modulo di ricerca.
+2025-10-09 23:59:14,074 [INFO] Avvio modulo search: similarità query-emails.
+2025-10-09 23:59:22,061 [INFO] Chiamata al modulo di ricerca.
+2025-10-10 00:00:07,176 [INFO] Avvio modulo search: similarità query-emails.
+2025-10-10 00:00:15,933 [INFO] Chiamata al modulo di ricerca.
+2025-10-10 00:00:49,163 [INFO] Avvio modulo search: similarità query-emails.
+2025-10-10 00:00:57,138 [INFO] Chiamata al modulo di ricerca.

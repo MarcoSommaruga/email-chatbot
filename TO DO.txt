@@ -1,0 +1,4 @@
+- sistemare tutti gli __init__ di create_embeddings, fetch_emails e il codice in src
+- togliere tutte le mail con corpo vuoto (o capire perché hanno il corpo vuoto)
+- valutare un text cleaning delle mail 
+- lavorare sul migliorare la similitudine (cambiare modello, lavorare sul testo, etc...)

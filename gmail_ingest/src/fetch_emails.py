@@ -15,7 +15,7 @@ logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
     handlers=[
-        logging.FileHandler("./logging/fetch_emails.log", encoding="utf-8"),
+        logging.FileHandler("./log/logs/fetch_emails.log", encoding="utf-8"),
         logging.StreamHandler()
     ]
 )
