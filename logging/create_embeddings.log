@@ -1,0 +1,190 @@
+2025-10-09 22:47:47,445 [INFO] Inizializzazione del modello SentenceTransformer.
+2025-10-09 22:47:47,446 [INFO] Use pytorch device_name: cpu
+2025-10-09 22:47:47,446 [INFO] Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-10-09 22:47:49,690 [INFO] Caricamento email da file.
+2025-10-09 22:47:49,692 [INFO] Estrazione dei corpi delle email.
+2025-10-09 22:47:49,692 [WARNING] Email senza corpo trovato: {'from': 'Servizio Clienti BBVA <servizioclienti@bbva.it>', 'subject': 'Re: [External] Richiesta reset password', 'body': ''}
+2025-10-09 22:47:49,692 [WARNING] Email senza corpo trovato: {'from': 'Francesca Corti <corti.francesca@hotmail.com>', 'subject': 'Fwd: Enel Energia – Comunicazioni', 'body': ''}
+2025-10-09 22:47:49,693 [WARNING] Email senza corpo trovato: {'from': 'GitHub <noreply@github.com>', 'subject': '[GitHub] A new public key was added to MarcoSommaruga/chatbot-email', 'body': ''}
+2025-10-09 22:47:49,693 [WARNING] Email senza corpo trovato: {'from': 'GitHub <noreply@github.com>', 'subject': '[GitHub] A new public key was added to MarcoSommaruga/chatbot-email', 'body': ''}
+2025-10-09 22:47:49,693 [WARNING] Email senza corpo trovato: {'from': 'GitHub <noreply@github.com>', 'subject': '[GitHub] A previously authorized third-party OAuth application has been granted additional scopes', 'body': ''}
+2025-10-09 22:47:49,693 [WARNING] Email senza corpo trovato: {'from': 'GitHub <noreply@github.com>', 'subject': '[GitHub] A third-party OAuth application has been added to your account', 'body': ''}
+2025-10-09 22:47:49,693 [WARNING] Email senza corpo trovato: {'from': 'GitHub <noreply@github.com>', 'subject': '[GitHub] A third-party OAuth application has been added to your account', 'body': ''}
+2025-10-09 22:47:49,694 [WARNING] Email senza corpo trovato: {'from': 'GitHub <noreply@github.com>', 'subject': '[GitHub] A personal access token (classic) has been added to your account', 'body': ''}
+2025-10-09 22:47:49,694 [WARNING] Email senza corpo trovato: {'from': 'GitHub <noreply@github.com>', 'subject': '[GitHub] A personal access token (classic) has been added to your account', 'body': ''}
+2025-10-09 22:47:49,694 [WARNING] Email senza corpo trovato: {'from': 'GitHub <noreply@github.com>', 'subject': '[GitHub] A personal access token (classic) has been added to your account', 'body': ''}
+2025-10-09 22:47:49,694 [WARNING] Email senza corpo trovato: {'from': 'GitHub <noreply@github.com>', 'subject': '[GitHub] Please verify your device', 'body': ''}
+2025-10-09 22:47:49,694 [WARNING] Email senza corpo trovato: {'from': 'GitHub <noreply@github.com>', 'subject': '[GitHub] Your password was reset', 'body': ''}
+2025-10-09 22:47:49,695 [INFO] Calcolo degli embedding.
+2025-10-09 22:47:50,054 [INFO] Embedding salvati in ./data/email_embeddings.npy.
+2025-10-09 22:47:50,055 [INFO] Testi delle email salvati in ./data/email_texts.txt.
+2025-10-09 22:47:50,056 [INFO] Embedding creati e salvati con successo.
+2025-10-09 23:01:55,495 [INFO] Inizializzazione del modello SentenceTransformer.
+2025-10-09 23:01:55,497 [INFO] Use pytorch device_name: cpu
+2025-10-09 23:01:55,497 [INFO] Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-10-09 23:01:57,613 [INFO] Caricamento email da file.
+2025-10-09 23:01:57,614 [INFO] Estrazione dei corpi delle email.
+2025-10-09 23:01:57,614 [WARNING] Email senza corpo trovato: {'from': 'Servizio Clienti BBVA <servizioclienti@bbva.it>', 'subject': 'Re: [External] Richiesta reset password', 'body': ''}
+2025-10-09 23:01:57,615 [WARNING] Email senza corpo trovato: {'from': 'Francesca Corti <corti.francesca@hotmail.com>', 'subject': 'Fwd: Enel Energia – Comunicazioni', 'body': ''}
+2025-10-09 23:01:57,615 [WARNING] Email senza corpo trovato: {'from': 'GitHub <noreply@github.com>', 'subject': '[GitHub] A new public key was added to MarcoSommaruga/chatbot-email', 'body': ''}
+2025-10-09 23:01:57,615 [WARNING] Email senza corpo trovato: {'from': 'GitHub <noreply@github.com>', 'subject': '[GitHub] A new public key was added to MarcoSommaruga/chatbot-email', 'body': ''}
+2025-10-09 23:01:57,616 [WARNING] Email senza corpo trovato: {'from': 'GitHub <noreply@github.com>', 'subject': '[GitHub] A previously authorized third-party OAuth application has been granted additional scopes', 'body': ''}
+2025-10-09 23:01:57,616 [WARNING] Email senza corpo trovato: {'from': 'GitHub <noreply@github.com>', 'subject': '[GitHub] A third-party OAuth application has been added to your account', 'body': ''}
+2025-10-09 23:01:57,616 [WARNING] Email senza corpo trovato: {'from': 'GitHub <noreply@github.com>', 'subject': '[GitHub] A third-party OAuth application has been added to your account', 'body': ''}
+2025-10-09 23:01:57,616 [WARNING] Email senza corpo trovato: {'from': 'GitHub <noreply@github.com>', 'subject': '[GitHub] A personal access token (classic) has been added to your account', 'body': ''}
+2025-10-09 23:01:57,617 [WARNING] Email senza corpo trovato: {'from': 'GitHub <noreply@github.com>', 'subject': '[GitHub] A personal access token (classic) has been added to your account', 'body': ''}
+2025-10-09 23:01:57,617 [WARNING] Email senza corpo trovato: {'from': 'GitHub <noreply@github.com>', 'subject': '[GitHub] A personal access token (classic) has been added to your account', 'body': ''}
+2025-10-09 23:01:57,617 [WARNING] Email senza corpo trovato: {'from': 'GitHub <noreply@github.com>', 'subject': '[GitHub] Please verify your device', 'body': ''}
+2025-10-09 23:01:57,617 [WARNING] Email senza corpo trovato: {'from': 'GitHub <noreply@github.com>', 'subject': '[GitHub] Your password was reset', 'body': ''}
+2025-10-09 23:01:57,618 [INFO] Calcolo degli embedding.
+2025-10-09 23:01:57,952 [INFO] Embedding salvati in ./data/email_embeddings.npy.
+2025-10-09 23:01:57,954 [INFO] Testi delle email salvati in ./data/email_texts.txt.
+2025-10-09 23:01:57,954 [INFO] Embedding creati e salvati con successo.
+2025-10-09 23:10:44,722 [INFO] Inizializzazione del modello SentenceTransformer.
+2025-10-09 23:10:44,723 [INFO] Use pytorch device_name: cpu
+2025-10-09 23:10:44,724 [INFO] Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-10-09 23:10:46,878 [INFO] Caricamento email da file.
+2025-10-09 23:10:46,914 [INFO] Estrazione dei corpi delle email.
+2025-10-09 23:10:46,914 [WARNING] Email senza corpo trovato: {'from': 'Nexi <nexi@message.nexi.it>', 'subject': 'Codici di sicurezza a portata di App Nexi Pay!', 'body': ''}
+2025-10-09 23:10:46,915 [WARNING] Email senza corpo trovato: {'from': 'Sommaruga Marco Francesco <marcofrancesco.sommaruga@unipol.it>', 'subject': 'I: link per colloquio 10.10', 'body': ''}
+2025-10-09 23:10:46,915 [WARNING] Email senza corpo trovato: {'from': 'Servizio Clienti BBVA <servizioclienti@bbva.it>', 'subject': 'Re: [External] Richiesta reset password', 'body': ''}
+2025-10-09 23:10:46,915 [WARNING] Email senza corpo trovato: {'from': 'Francesca Corti <corti.francesca@hotmail.com>', 'subject': 'Fwd: Enel Energia – Comunicazioni', 'body': ''}
+2025-10-09 23:10:46,915 [WARNING] Email senza corpo trovato: {'from': 'GitHub <noreply@github.com>', 'subject': '[GitHub] A new public key was added to MarcoSommaruga/chatbot-email', 'body': ''}
+2025-10-09 23:10:46,916 [WARNING] Email senza corpo trovato: {'from': 'GitHub <noreply@github.com>', 'subject': '[GitHub] A new public key was added to MarcoSommaruga/chatbot-email', 'body': ''}
+2025-10-09 23:10:46,916 [WARNING] Email senza corpo trovato: {'from': 'GitHub <noreply@github.com>', 'subject': '[GitHub] A previously authorized third-party OAuth application has been granted additional scopes', 'body': ''}
+2025-10-09 23:10:46,916 [WARNING] Email senza corpo trovato: {'from': 'GitHub <noreply@github.com>', 'subject': '[GitHub] A third-party OAuth application has been added to your account', 'body': ''}
+2025-10-09 23:10:46,916 [WARNING] Email senza corpo trovato: {'from': 'GitHub <noreply@github.com>', 'subject': '[GitHub] A third-party OAuth application has been added to your account', 'body': ''}
+2025-10-09 23:10:46,917 [WARNING] Email senza corpo trovato: {'from': 'GitHub <noreply@github.com>', 'subject': '[GitHub] A personal access token (classic) has been added to your account', 'body': ''}
+2025-10-09 23:10:46,917 [WARNING] Email senza corpo trovato: {'from': 'GitHub <noreply@github.com>', 'subject': '[GitHub] A personal access token (classic) has been added to your account', 'body': ''}
+2025-10-09 23:10:46,917 [WARNING] Email senza corpo trovato: {'from': 'GitHub <noreply@github.com>', 'subject': '[GitHub] A personal access token (classic) has been added to your account', 'body': ''}
+2025-10-09 23:10:46,917 [WARNING] Email senza corpo trovato: {'from': 'GitHub <noreply@github.com>', 'subject': '[GitHub] Please verify your device', 'body': ''}
+2025-10-09 23:10:46,918 [WARNING] Email senza corpo trovato: {'from': 'GitHub <noreply@github.com>', 'subject': '[GitHub] Your password was reset', 'body': ''}
+2025-10-09 23:10:46,918 [WARNING] Email senza corpo trovato: {'from': 'marcofrancescosommaruga@gmail.com', 'subject': 'Accettato: Incontro Banco Desio', 'body': ''}
+2025-10-09 23:10:46,918 [WARNING] Email senza corpo trovato: {'from': '"MutuiOnline.it" <news@news.mutuionline.it>', 'subject': '📢 Mutui Online: tassi vantaggiosi da 2,18%', 'body': ''}
+2025-10-09 23:10:46,918 [WARNING] Email senza corpo trovato: {'from': 'Playtomic <no-reply@playtomic.io>', 'subject': 'Playtomic - Conferma prenotazione', 'body': ''}
+2025-10-09 23:10:46,919 [WARNING] Email senza corpo trovato: {'from': '"no-reply@molino.parcheggiatm.it" <no-reply@molino.parcheggiatm.it>', 'subject': 'Conferma Ordine ATM Molino Dorino', 'body': ''}
+2025-10-09 23:10:46,919 [WARNING] Email senza corpo trovato: {'from': '"no-reply@molino.parcheggiatm.it" <no-reply@molino.parcheggiatm.it>', 'subject': 'Attivazione Utente', 'body': ''}
+2025-10-09 23:10:46,919 [WARNING] Email senza corpo trovato: {'from': 'Servizio Clienti BBVA <servizioclienti@bbva.it>', 'subject': 'Re: [External] Richiesta reset password', 'body': ''}
+2025-10-09 23:10:46,919 [WARNING] Email senza corpo trovato: {'from': 'Marco Francesco Sommaruga <marcofrancescosommaruga@gmail.com>', 'subject': 'Re: [External] Richiesta reset password', 'body': ''}
+2025-10-09 23:10:46,919 [WARNING] Email senza corpo trovato: {'from': 'Revolut <no-reply@revolut.com>', 'subject': 'Concediti una pausa con un prestito personale', 'body': ''}
+2025-10-09 23:10:46,920 [WARNING] Email senza corpo trovato: {'from': 'Adriana from Ok Mobility <no-reply@opinat.com>', 'subject': 'Your opinion helps us to improve!', 'body': ''}
+2025-10-09 23:10:46,921 [WARNING] Email senza corpo trovato: {'from': 'OK Mobility <web-no-reply@okmobility.com>', 'subject': 'Grazie per aver confidato in OK Mobility', 'body': ''}
+2025-10-09 23:10:46,921 [WARNING] Email senza corpo trovato: {'from': 'Servizio Clienti BBVA <servizioclienti@bbva.it>', 'subject': '[External] Richiesta reset password', 'body': ''}
+2025-10-09 23:10:46,921 [WARNING] Email senza corpo trovato: {'from': 'Marco Francesco Sommaruga <marcofrancescosommaruga@gmail.com>', 'subject': 'Richiesta reset password', 'body': ''}
+2025-10-09 23:10:46,922 [WARNING] Email senza corpo trovato: {'from': 'notificaciones-bbva@bbva.com', 'subject': 'Abbiamo rilevato vari tentativi di accesso, sei stato tu?', 'body': ''}
+2025-10-09 23:10:46,922 [WARNING] Email senza corpo trovato: {'from': 'UniSalute <NoReply@unisalute.it>', 'subject': 'Riepilogo delle richieste di rimborso', 'body': ''}
+2025-10-09 23:10:46,922 [WARNING] Email senza corpo trovato: {'from': 'Revolut <no-reply@revolut.com>', 'subject': 'Guadagna 50\xa0€ per ogni amico che apre un conto Revolut', 'body': ''}
+2025-10-09 23:10:46,922 [WARNING] Email senza corpo trovato: {'from': 'directa <automatica@directa.it>', 'subject': '01/10/25 - 15:25:34 login al conto E8769', 'body': ''}
+2025-10-09 23:10:46,922 [WARNING] Email senza corpo trovato: {'from': 'Rapporto justETF <monthly@report.justetf.com>', 'subject': 'Reportistica mensile del vostro portafoglio: My Investments', 'body': ''}
+2025-10-09 23:10:46,923 [WARNING] Email senza corpo trovato: {'from': 'notifiche@email.bbva.it', 'subject': "Ciao Marco Francesco, è ora disponibile l'estratto conto della tua carta", 'body': ''}
+2025-10-09 23:10:46,923 [WARNING] Email senza corpo trovato: {'from': '"Caravan Park Sexten tramite Booking.com" <6755613446-rvxt.effz.xvc6.3vzt@property.booking.com>', 'subject': 'La Sua conferma di prenotazione dal Caravan Park Sexten', 'body': ''}
+2025-10-09 23:10:46,923 [WARNING] Email senza corpo trovato: {'from': 'directa <automatica@directa.it>', 'subject': '29/09/25 - 17:38:52 login al conto E8769', 'body': ''}
+2025-10-09 23:10:46,923 [WARNING] Email senza corpo trovato: {'from': 'Revolut <no-reply@revolut.com>', 'subject': 'Ecco una selezione di nuove carte per il tuo piano', 'body': ''}
+2025-10-09 23:10:46,924 [WARNING] Email senza corpo trovato: {'from': 'Revolut <no-reply@revolut.com>', 'subject': 'Riscatta punti per la tua prossima prenotazione con Soggiorni', 'body': ''}
+2025-10-09 23:10:46,924 [WARNING] Email senza corpo trovato: {'from': 'CartaFRECCIA Trenitalia <cartafreccia@info.trenitalia.it>', 'subject': 'Proroga Programma CartaFRECCIA - Comunicazione di servizio', 'body': ''}
+2025-10-09 23:10:46,924 [WARNING] Email senza corpo trovato: {'from': 'OK Mobility <web-no-reply@okmobility.com>', 'subject': 'MARCO SOMMARUGA, la documentazione del tuo noleggio', 'body': ''}
+2025-10-09 23:10:46,924 [WARNING] Email senza corpo trovato: {'from': '"Sicily by Car S.p.A." <newsletter@sbc.it>', 'subject': 'Comunicazione importante!', 'body': ''}
+2025-10-09 23:10:46,924 [WARNING] Email senza corpo trovato: {'from': 'AlphaSignal <news@alphasignal.ai>', 'subject': '⚡️Google Chrome launches DevTools MCP: AI agents debug live pages', 'body': ''}
+2025-10-09 23:10:46,925 [WARNING] Email senza corpo trovato: {'from': 'notificaciones-bbva@bbva.com', 'subject': 'Hai una comunicazione importante in sospeso', 'body': ''}
+2025-10-09 23:10:46,925 [WARNING] Email senza corpo trovato: {'from': 'notificaciones-bbva@bbva.com', 'subject': 'Hai una comunicazione importante in sospeso', 'body': ''}
+2025-10-09 23:10:46,925 [WARNING] Email senza corpo trovato: {'from': '"MutuiOnline.it" <news@news.mutuionline.it>', 'subject': '📢Mutui online: TAN da 2,18%', 'body': ''}
+2025-10-09 23:10:46,925 [WARNING] Email senza corpo trovato: {'from': 'Vodafone <fatture@vodafone.it>', 'subject': 'Emissione fattura n. TF82964002', 'body': ''}
+2025-10-09 23:10:46,925 [WARNING] Email senza corpo trovato: {'from': 'Apple <no_reply@email.apple.com>', 'subject': 'La tua fattura da Apple', 'body': ''}
+2025-10-09 23:10:46,925 [WARNING] Email senza corpo trovato: {'from': 'Francesca Corti <corti.francesca@hotmail.com>', 'subject': 'Fw: Enel Energia - Contratto di luce per la richiesta di Voltura senza accollo', 'body': ''}
+2025-10-09 23:10:46,925 [WARNING] Email senza corpo trovato: {'from': '<no-reply.anpr@sogei.it>', 'subject': 'ANPR - Servizi demografici - Conferma email di contatto', 'body': ''}
+2025-10-09 23:10:46,926 [WARNING] Email senza corpo trovato: {'from': 'notifichediaccesso@posteid.poste.it', 'subject': 'Notifica di autenticazione identity provider posteid.poste.it', 'body': ''}
+2025-10-09 23:10:46,926 [WARNING] Email senza corpo trovato: {'from': 'Revolut <no-reply@revolut.com>', 'subject': 'Hai inviato 426,52\xa0€ a Francesca Corti 💸', 'body': ''}
+2025-10-09 23:10:46,926 [WARNING] Email senza corpo trovato: {'from': 'Apple <no_reply@email.apple.com>', 'subject': 'Il tuo abbonamento è confermato', 'body': ''}
+2025-10-09 23:10:46,926 [WARNING] Email senza corpo trovato: {'from': 'vodafonepr-jobnotification@noreply12.jobs2web.com', 'subject': 'Here’s a Vodafone job match for you', 'body': ''}
+2025-10-09 23:10:46,926 [WARNING] Email senza corpo trovato: {'from': 'AlphaSignal <news@alphasignal.ai>', 'subject': '⚙️ Ex-OpenAI CTO’s lab makes LLMs consistent', 'body': ''}
+2025-10-09 23:10:46,926 [WARNING] Email senza corpo trovato: {'from': 'Francesca Corti <corti.francesca@hotmail.com>', 'subject': 'Strippatura Gae', 'body': ''}
+2025-10-09 23:10:46,926 [WARNING] Email senza corpo trovato: {'from': 'chiara.giudice@immobiliare.it', 'subject': 'Prospetto ISP - Marco Sommaruga', 'body': ''}
+2025-10-09 23:10:46,927 [WARNING] Email senza corpo trovato: {'from': 'Apple <no_reply@email.apple.com>', 'subject': 'La tua fattura da Apple', 'body': ''}
+2025-10-09 23:10:46,927 [WARNING] Email senza corpo trovato: {'from': 'UniSalute <NoReply@unisalute.it>', 'subject': 'Unisalute: Conferma Rimborso', 'body': ''}
+2025-10-09 23:10:46,927 [WARNING] Email senza corpo trovato: {'from': 'idealista <nonrispondere@idealista.it>', 'subject': 'Nuovo accesso', 'body': ''}
+2025-10-09 23:10:46,927 [WARNING] Email senza corpo trovato: {'from': 'idealista <nonrispondere@idealista.it>', 'subject': 'La tua valutazione è pronta', 'body': ''}
+2025-10-09 23:10:46,927 [WARNING] Email senza corpo trovato: {'from': 'Marco Francesco Sommaruga <marcofrancescosommaruga@gmail.com>', 'subject': 'Biglietti', 'body': ''}
+2025-10-09 23:10:46,927 [WARNING] Email senza corpo trovato: {'from': '"Casa.it" <noreply@casa.it>', 'subject': 'Riepilogo della tua valutazione a Pero', 'body': ''}
+2025-10-09 23:10:46,928 [WARNING] Email senza corpo trovato: {'from': 'Team Odonto - Santagostino <team.odonto@santagostino.it>', 'subject': 'Re: Santagostino - Richieste e Informazioni Paziente -  [#523772]', 'body': ''}
+2025-10-09 23:10:46,928 [WARNING] Email senza corpo trovato: {'from': 'Playtomic <no-reply@playtomic.io>', 'subject': 'Iscrizione all’attività completata', 'body': ''}
+2025-10-09 23:10:46,928 [WARNING] Email senza corpo trovato: {'from': '"Rose, Sonder Hotel by Marriott Bonvoy tramite Booking.com" <noreply@booking.com>', 'subject': 'Hai un messaggio da Rose, Sonder Hotel by Marriott Bonvoy', 'body': ''}
+2025-10-09 23:10:46,928 [WARNING] Email senza corpo trovato: {'from': 'Revolut <no-reply@revolut.com>', 'subject': 'Hai inviato 587,76\xa0€ a Marco Francesco Sommaruga 💸', 'body': ''}
+2025-10-09 23:10:46,928 [WARNING] Email senza corpo trovato: {'from': 'Revolut <no-reply@revolut.com>', 'subject': 'Hai inviato 166,27\xa0€ a Marco Francesco Sommaruga 💸', 'body': ''}
+2025-10-09 23:10:46,929 [WARNING] Email senza corpo trovato: {'from': '"Hotel 171 tramite Booking.com" <noreply@booking.com>', 'subject': 'Hai un messaggio da Hotel 171', 'body': ''}
+2025-10-09 23:10:46,929 [WARNING] Email senza corpo trovato: {'from': 'Revolut <no-reply@revolut.com>', 'subject': 'Hai inviato 234\xa0€ a Francesca Corti 💸', 'body': ''}
+2025-10-09 23:10:46,929 [WARNING] Email senza corpo trovato: {'from': '"Ticketmaster.it" <noreply@ticketmaster.it>', 'subject': 'Conferma ordine 3346018', 'body': ''}
+2025-10-09 23:10:46,929 [WARNING] Email senza corpo trovato: {'from': '"Ticketmaster.it" <noreply@ticketmaster.it>', 'subject': 'Nuova password', 'body': ''}
+2025-10-09 23:10:46,929 [WARNING] Email senza corpo trovato: {'from': 'UniSalute <NoReply@unisalute.it>', 'subject': 'Conferma servizio Prenotazione Ecografia mammelle', 'body': ''}
+2025-10-09 23:10:46,929 [WARNING] Email senza corpo trovato: {'from': '"MutuiOnline.it" <news@news.mutuionline.it>', 'subject': '📢Mutui: scopri i tassi di settembre!', 'body': ''}
+2025-10-09 23:10:46,930 [WARNING] Email senza corpo trovato: {'from': 'UniSalute <NoReply@unisalute.it>', 'subject': 'Unisalute: Conferma Rimborso', 'body': ''}
+2025-10-09 23:10:46,930 [WARNING] Email senza corpo trovato: {'from': 'UniSalute <NoReply@unisalute.it>', 'subject': 'Riepilogo delle richieste di rimborso', 'body': ''}
+2025-10-09 23:10:46,930 [WARNING] Email senza corpo trovato: {'from': 'UniSalute <NoReply@unisalute.it>', 'subject': 'Unisalute: Conferma Rimborso', 'body': ''}
+2025-10-09 23:10:46,930 [WARNING] Email senza corpo trovato: {'from': 'Rapporto justETF <monthly@report.justetf.com>', 'subject': 'Reportistica mensile del vostro portafoglio: My Investments', 'body': ''}
+2025-10-09 23:10:46,930 [WARNING] Email senza corpo trovato: {'from': 'Indeed <donotreply@match.indeed.com>', 'subject': 'Data Scientist presso RE COLLECTION SRL', 'body': ''}
+2025-10-09 23:10:46,931 [WARNING] Email senza corpo trovato: {'from': 'Air Europa Suma <info@aireuropanews.com>', 'subject': 'Suma Miles balance – September 2025', 'body': ''}
+2025-10-09 23:10:46,931 [WARNING] Email senza corpo trovato: {'from': 'Indeed <donotreply@match.indeed.com>', 'subject': 'Data Scientist presso Wind Tre', 'body': ''}
+2025-10-09 23:10:46,931 [WARNING] Email senza corpo trovato: {'from': 'Playtomic <no-reply@playtomic.io>', 'subject': 'Iscrizione all’attività completata', 'body': ''}
+2025-10-09 23:10:46,931 [WARNING] Email senza corpo trovato: {'from': 'idealista <nonrispondere@idealista.it>', 'subject': 'Uno dei tuoi preferiti non è più attivo', 'body': ''}
+2025-10-09 23:10:46,931 [WARNING] Email senza corpo trovato: {'from': 'Trenitalia <webmaster@trenitalia.it>', 'subject': 'Il Tuo Biglietto Trenitalia', 'body': ''}
+2025-10-09 23:10:46,931 [WARNING] Email senza corpo trovato: {'from': 'Airbnb <noreply@airbnb.com>', 'subject': 'Termini del servizio di Airbnb per residenti europei', 'body': ''}
+2025-10-09 23:10:46,932 [WARNING] Email senza corpo trovato: {'from': 'Welcome to the Jungle <help@welcometothejungle.com>', 'subject': 'New match: Payroll Automation & Data Specialist at Remote', 'body': ''}
+2025-10-09 23:10:46,932 [WARNING] Email senza corpo trovato: {'from': 'directa <automatica@directa.it>', 'subject': '25/08/25 - 09:30:11 login al conto E8769', 'body': ''}
+2025-10-09 23:10:46,932 [WARNING] Email senza corpo trovato: {'from': '<sitoweb@unisalute.it>', 'subject': 'UniSalute: Modifica password utente', 'body': ''}
+2025-10-09 23:10:46,932 [WARNING] Email senza corpo trovato: {'from': 'Revolut <no-reply@revolut.com>', 'subject': 'Hai inviato 142\xa0€ a Marco Francesco Sommaruga 💸', 'body': ''}
+2025-10-09 23:10:46,932 [WARNING] Email senza corpo trovato: {'from': 'Sommaruga Marco Francesco <marcofrancesco.sommaruga@unipol.it>', 'subject': 'I: fattura 182/2025', 'body': ''}
+2025-10-09 23:10:46,933 [WARNING] Email senza corpo trovato: {'from': 'American Airlines <no-reply@info.email.aa.com>', 'subject': 'Conferma del viaggio (MXP - MXP)', 'body': ''}
+2025-10-09 23:10:46,933 [WARNING] Email senza corpo trovato: {'from': 'Indeed <donotreply@match.indeed.com>', 'subject': 'DATA SCIENTIST - MILANO presso ISCS Srls', 'body': ''}
+2025-10-09 23:10:46,933 [WARNING] Email senza corpo trovato: {'from': 'Playtomic <no-reply@playtomic.io>', 'subject': 'Iscrizione all’attività completata', 'body': ''}
+2025-10-09 23:10:46,934 [WARNING] Email senza corpo trovato: {'from': 'Vodafone <fatture@vodafone.it>', 'subject': 'Emissione fattura n. TF80273523', 'body': ''}
+2025-10-09 23:10:46,934 [WARNING] Email senza corpo trovato: {'from': 'DeepSeek <support@sc.mail.deepseek.com>', 'subject': 'Important Update: DeepSeek API Upgraded to DeepSeek-V3.1 & Pricing Adjustment', 'body': ''}
+2025-10-09 23:10:46,934 [WARNING] Email senza corpo trovato: {'from': '"ConTe.it" <assicurazione@conte.it>', 'subject': 'Per acquistare il tuo Preventivo salvato...', 'body': ''}
+2025-10-09 23:10:46,934 [WARNING] Email senza corpo trovato: {'from': 'Revolut <no-reply@revolut.com>', 'subject': 'Guadagna 50\xa0€ per ogni amico che apre un conto Revolut', 'body': ''}
+2025-10-09 23:10:46,934 [WARNING] Email senza corpo trovato: {'from': 'InfoClienti Sisal <infoclienti@sisal.it>', 'subject': 'Hai ottenuto un bonus!', 'body': ''}
+2025-10-09 23:10:46,934 [WARNING] Email senza corpo trovato: {'from': 'Playtomic <no-reply@playtomic.io>', 'subject': 'Iscrizione all’attività completata', 'body': ''}
+2025-10-09 23:10:46,935 [WARNING] Email senza corpo trovato: {'from': 'Hugging Face Xet Support <website+xet@huggingface.co>', 'subject': "[Hugging Face] You've been upgraded to Xet!", 'body': ''}
+2025-10-09 23:10:46,935 [WARNING] Email senza corpo trovato: {'from': '"MutuiOnline.it" <news@news.mutuionline.it>', 'subject': '📢Mutui: Tassi in calo, acquista ora!', 'body': ''}
+2025-10-09 23:10:46,935 [WARNING] Email senza corpo trovato: {'from': 'Playtomic <no-reply@playtomic.io>', 'subject': 'Iscrizione all’attività completata', 'body': ''}
+2025-10-09 23:10:46,935 [WARNING] Email senza corpo trovato: {'from': 'Verti Assicurazioni <Preventivo_polizza@verti.it>', 'subject': 'Ecco il tuo preventivo', 'body': ''}
+2025-10-09 23:10:46,935 [WARNING] Email senza corpo trovato: {'from': 'Allianz Direct <no-reply@allianzdirect.it>', 'subject': 'Entra in Allianz Direct: scopri il preventivo per la tua moto targata EF73234', 'body': ''}
+2025-10-09 23:10:46,935 [WARNING] Email senza corpo trovato: {'from': 'Allianz Direct <no-reply@allianzdirect.it>', 'subject': 'Entra in Allianz Direct: scopri il preventivo per la tua moto targata EF73234', 'body': ''}
+2025-10-09 23:10:46,936 [WARNING] Email senza corpo trovato: {'from': 'Area Clienti AXA <noreply@mail.axa.it>', 'subject': 'Comunicazione di servizio: Scegli la tua password', 'body': ''}
+2025-10-09 23:10:46,936 [WARNING] Email senza corpo trovato: {'from': 'Allianz Direct <no-reply@allianzdirect.it>', 'subject': 'Entra in Allianz Direct: scopri il preventivo per la tua moto targata EF73234', 'body': ''}
+2025-10-09 23:10:46,936 [WARNING] Email senza corpo trovato: {'from': '"amazon.co.uk" <account-update@amazon.co.uk>', 'subject': 'amazon.co.uk: Accedi', 'body': ''}
+2025-10-09 23:10:46,936 [WARNING] Email senza corpo trovato: {'from': 'Revolut <no-reply@revolut.com>', 'subject': 'Scegli una carta che ti rispecchi', 'body': ''}
+2025-10-09 23:10:46,936 [WARNING] Email senza corpo trovato: {'from': 'directa <automatica@directa.it>', 'subject': '14/08/25 - 15:58:08 login al conto E8769', 'body': ''}
+2025-10-09 23:10:46,936 [WARNING] Email senza corpo trovato: {'from': 'Francesca Corti <corti.francesca@hotmail.com>', 'subject': 'Andalusia', 'body': ''}
+2025-10-09 23:10:46,937 [WARNING] Email senza corpo trovato: {'from': 'Apple <no_reply@email.apple.com>', 'subject': 'La tua fattura da Apple', 'body': ''}
+2025-10-09 23:10:46,937 [WARNING] Email senza corpo trovato: {'from': 'Naukri <info@naukri.com>', 'subject': 'Marco Francesco Sommaruga, Top companies are hiring on Naukri right now!', 'body': ''}
+2025-10-09 23:10:46,937 [WARNING] Email senza corpo trovato: {'from': 'Revolut <no-reply@revolut.com>', 'subject': 'Hai inviato 91\xa0€ a Francesca Corti 💸', 'body': ''}
+2025-10-09 23:10:46,937 [WARNING] Email senza corpo trovato: {'from': 'UniSalute <NoReply@unisalute.it>', 'subject': 'Riepilogo delle richieste di rimborso', 'body': ''}
+2025-10-09 23:10:46,937 [WARNING] Email senza corpo trovato: {'from': '"Facile.it - Assicurazioni" <preventivo.assicurazioni@remind.facile.it>', 'subject': 'Marco Francesco, ecco il miglior preventivo per la tua Piaggio Vespa 300 Gts', 'body': ''}
+2025-10-09 23:10:46,937 [WARNING] Email senza corpo trovato: {'from': 'Area Clienti AXA <noreply@mail.axa.it>', 'subject': 'Promemoria scadenza settembre 2025 - nuovo documento disponibile', 'body': ''}
+2025-10-09 23:10:46,938 [WARNING] Email senza corpo trovato: {'from': 'Rapporto justETF <monthly@report.justetf.com>', 'subject': 'Reportistica mensile del vostro portafoglio: My Investments', 'body': ''}
+2025-10-09 23:10:46,938 [WARNING] Email senza corpo trovato: {'from': 'Playtomic <no-reply@playtomic.io>', 'subject': 'Playtomic - Conferma prenotazione', 'body': ''}
+2025-10-09 23:10:46,938 [WARNING] Email senza corpo trovato: {'from': 'directa <automatica@directa.it>', 'subject': '31/07/25 - 16:16:48 login al conto E8769', 'body': ''}
+2025-10-09 23:10:46,938 [WARNING] Email senza corpo trovato: {'from': 'Revolut <no-reply@revolut.com>', 'subject': 'Hai inviato 450\xa0€ a Francesca Corti 💸', 'body': ''}
+2025-10-09 23:10:46,938 [WARNING] Email senza corpo trovato: {'from': 'directa <automatica@directa.it>', 'subject': '27/07/25 - 15:22:11 login al conto E8769', 'body': ''}
+2025-10-09 23:10:46,938 [WARNING] Email senza corpo trovato: {'from': 'Vodafone <fatture@vodafone.it>', 'subject': 'Emissione fattura n. TF77574044', 'body': ''}
+2025-10-09 23:10:46,939 [WARNING] Email senza corpo trovato: {'from': 'UniSalute <NoReply@unisalute.it>', 'subject': 'Unisalute: Conferma Rimborso', 'body': ''}
+2025-10-09 23:10:46,939 [WARNING] Email senza corpo trovato: {'from': 'Nexi <nexi@message.nexi.it>', 'subject': 'È uscito un nuovo numero di "Non Cliccare Qui"', 'body': ''}
+2025-10-09 23:10:46,939 [WARNING] Email senza corpo trovato: {'from': '"Fermopoint S.r.l." <tracking@fermopoint.it>', 'subject': '[ Douglas ] Il tuo pacco è arrivato - Ritiro: DC881EB278016', 'body': ''}
+2025-10-09 23:10:46,939 [WARNING] Email senza corpo trovato: {'from': 'Revolut <no-reply@revolut.com>', 'subject': 'Ti regaliamo due mesi di Premium 🫶', 'body': ''}
+2025-10-09 23:10:46,939 [WARNING] Email senza corpo trovato: {'from': 'Douglas <service@douglas.it>', 'subject': "La tua fattura per l'ordine DGLIT0010526033", 'body': ''}
+2025-10-09 23:10:46,939 [WARNING] Email senza corpo trovato: {'from': 'Douglas Service <service@douglas.it>', 'subject': 'Il tuo ordine è in arrivo.\n\n', 'body': ''}
+2025-10-09 23:10:46,940 [WARNING] Email senza corpo trovato: {'from': 'idealista <nonrispondere@idealista.it>', 'subject': 'Uno dei tuoi preferiti non è più attivo', 'body': ''}
+2025-10-09 23:10:46,940 [WARNING] Email senza corpo trovato: {'from': '"Fermopoint S.r.l." <confirmation@fermopoint.it>', 'subject': '[ Douglas ] Prenotazione confermata: DC881EB278016', 'body': ''}
+2025-10-09 23:10:46,940 [WARNING] Email senza corpo trovato: {'from': 'Douglas <service@douglas.it>', 'subject': 'Il tuo ordine è stato correttamente ricevuto.\n\n', 'body': ''}
+2025-10-09 23:10:46,940 [WARNING] Email senza corpo trovato: {'from': 'Google Cloud <CloudPlatform-noreply@google.com>', 'subject': '[Action Advised] Review and set appropriate daily usage limit for BigQuery projects before Sep 1, 2025', 'body': ''}
+2025-10-09 23:10:46,940 [WARNING] Email senza corpo trovato: {'from': 'directa <automatica@directa.it>', 'subject': '15/07/25 - 23:27:19 login al conto E8769', 'body': ''}
+2025-10-09 23:10:46,940 [WARNING] Email senza corpo trovato: {'from': 'Chiara Giudice <chiara.giudice@immobiliare.it>', 'subject': 'Marco, hai una soluzione di mutuo pronta per te!', 'body': ''}
+2025-10-09 23:10:46,940 [WARNING] Email senza corpo trovato: {'from': 'UniSalute <NoReply@unisalute.it>', 'subject': 'Unisalute: Valutazione Rimborso', 'body': ''}
+2025-10-09 23:10:46,940 [WARNING] Email senza corpo trovato: {'from': 'UniSalute <NoReply@unisalute.it>', 'subject': 'Unisalute: Conferma Rimborso', 'body': ''}
+2025-10-09 23:10:46,941 [WARNING] Email senza corpo trovato: {'from': 'UniSalute <NoReply@unisalute.it>', 'subject': 'Riepilogo delle richieste di rimborso', 'body': ''}
+2025-10-09 23:10:46,941 [WARNING] Email senza corpo trovato: {'from': 'Apple <no_reply@email.apple.com>', 'subject': 'Rinnovo abbonamento', 'body': ''}
+2025-10-09 23:10:46,941 [WARNING] Email senza corpo trovato: {'from': 'UniSalute <NoReply@unisalute.it>', 'subject': "Riepilogo annuale dei documenti di spesa dell'anno 2024", 'body': ''}
+2025-10-09 23:10:46,941 [WARNING] Email senza corpo trovato: {'from': 'vodafonepr-jobnotification@noreply12.jobs2web.com', 'subject': 'Here’s a Vodafone job match for you', 'body': ''}
+2025-10-09 23:10:46,941 [WARNING] Email senza corpo trovato: {'from': 'CartaFRECCIA Trenitalia <cartafreccia@info.trenitalia.it>', 'subject': 'Viaggiare informati. Attenzione alle truffe! - Comunicazione di servizio', 'body': ''}
+2025-10-09 23:10:46,941 [INFO] Calcolo degli embedding.
+2025-10-09 23:11:03,273 [INFO] Embedding salvati in ./data/email_embeddings.npy.
+2025-10-09 23:11:03,293 [INFO] Testi delle email salvati in ./data/email_texts.txt.
+2025-10-09 23:11:03,294 [INFO] Embedding creati e salvati con successo.

@@ -15,7 +15,7 @@ logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
     handlers=[
-        logging.FileHandler("fetch_emails.log", encoding="utf-8"),
+        logging.FileHandler("./logging/fetch_emails.log", encoding="utf-8"),
         logging.StreamHandler()
     ]
 )
@@ -39,8 +39,8 @@ if not all([CLIENT_ID, CLIENT_SECRET, REDIRECT_URI]):
 SCOPES = ['https://www.googleapis.com/auth/gmail.readonly']
 
 # File token e credentials
-TOKEN_FILE = 'token.json'
-CREDENTIALS_FILE = 'credentials.json'
+TOKEN_FILE = './gmail_ingest/config/token.json'
+CREDENTIALS_FILE = './gmail_ingest/config/credentials.json'
 
 # Crea il file credentials.json dinamicamente se non esiste
 if not os.path.exists(CREDENTIALS_FILE):
@@ -54,7 +54,7 @@ if not os.path.exists(CREDENTIALS_FILE):
         }
     }
     try:
-        with open(CREDENTIALS_FILE, 'w', encoding="utf-8") as f:
+        with open('./gmail_ingest/config/' + CREDENTIALS_FILE, 'w', encoding="utf-8") as f:
             json.dump(credentials_data, f, indent=4)
         logger.info("Creato il file credentials.json dinamicamente")
     except Exception as e:
@@ -64,8 +64,8 @@ if not os.path.exists(CREDENTIALS_FILE):
 def authenticate_gmail():
     creds = None
     try:
-        if os.path.exists(TOKEN_FILE):
-            creds = Credentials.from_authorized_user_file(TOKEN_FILE, SCOPES)
+        if os.path.exists('./gmail_ingest/config/' + TOKEN_FILE):
+            creds = Credentials.from_authorized_user_file('./gmail_ingest/config/' + TOKEN_FILE, SCOPES)
             logger.info("Token letto da file")
     except Exception as e:
         raiseException(e, f"Errore durante la lettura di {TOKEN_FILE}")
@@ -116,9 +116,9 @@ def fetch_recent_emails():
         creds = authenticate_gmail()
         service = build('gmail', 'v1', credentials=creds)
         now = datetime.datetime.utcnow()
-        yesterday = now - datetime.timedelta(days=1)
+        yesterday = now - datetime.timedelta(days=100)
         query = f"after:{int(yesterday.timestamp())}"
-        results = service.users().messages().list(userId='me', q=query, maxResults=100).execute()
+        results = service.users().messages().list(userId='me', q=query, maxResults=1000).execute()
         messages = results.get('messages', [])
         logger.info("Trovati %d messaggi", len(messages))
         for msg in messages:
@@ -135,7 +135,7 @@ def fetch_recent_emails():
 # Salva le email in un file JSON
 def save_emails_to_json(emails, filename="emails.json"):
     try:
-        with open(filename, "w", encoding="utf-8") as f:
+        with open('./data/' + filename, "w", encoding="utf-8") as f:
             json.dump(emails, f, ensure_ascii=False, indent=4)
         logger.info("Email salvate su %s", filename)
     except Exception as e:
@@ -146,11 +146,12 @@ if __name__ == "__main__":
         emails = fetch_recent_emails()
         if emails:
             save_emails_to_json(emails)
-            for i, email in enumerate(emails, 1):
-                print(f"\n📧 Email {i}")
-                print(f"Da: {email['from']}")
-                print(f"Oggetto: {email['subject']}")
-                print(f"Corpo:\n{email['body']}")
+            #for i, email in enumerate(emails, 1):
+            #    print(f"\nEmail {i}")
+            #    print(f"Da: {email['from']}")
+            #    print(f"Oggetto: {email['subject']}")
+            #    print(f"Corpo:\n{email['body']}")
+            print(len(emails), "email recuperate e salvate con successo.")
         else:
             logger.warning("Nessuna email recuperata.")
     except Exception as main_e:
