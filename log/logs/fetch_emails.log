@@ -19,3 +19,64 @@
 2025-10-09 23:06:41,673 [INFO] file_cache is only supported with oauth2client<4.0.0
 2025-10-09 23:06:42,270 [INFO] Trovati 500 messaggi
 2025-10-09 23:08:28,072 [INFO] Email salvate su emails.json
+2025-10-11 16:15:41,372 [CRITICAL] Variabili d'ambiente mancanti: CLIENT_ID, CLIENT_SECRET e/o REDIRECT_URI
+NoneType: None
+2025-10-11 16:15:41,374 [ERROR] Errore nell'esecuzione dell'applicazione principale: Missing environment variables
+Traceback (most recent call last):
+  File "C:\Users\UGA06690\Desktop\LAVORO\MYENV\chatbot-email\gmail_ingest\src\__init__.py", line 13, in main
+    from fetch_emails import main as fetch_emails_main
+  File "C:\Users\UGA06690\Desktop\LAVORO\MYENV\chatbot-email\gmail_ingest\src\fetch_emails.py", line 35, in <module>
+    raiseException(Exception("Missing environment variables"),
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                   "Variabili d'ambiente mancanti: CLIENT_ID, CLIENT_SECRET e/o REDIRECT_URI")
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UGA06690\Desktop\LAVORO\MYENV\chatbot-email\gmail_ingest\src\fetch_emails.py", line 27, in raiseException
+    raise e
+Exception: Missing environment variables
+2025-10-11 16:21:20,895 [INFO] Avvio del modulo fetch_emails per il recupero delle email.
+2025-10-11 16:21:20,896 [ERROR] Variabili d'ambiente mancanti: CLIENT_ID, CLIENT_SECRET e/o REDIRECT_URI
+NoneType: None
+2025-10-11 16:21:55,042 [INFO] Avvio del modulo fetch_emails per il recupero delle email.
+2025-10-11 16:21:55,042 [ERROR] Variabili d'ambiente mancanti: CLIENT_ID, CLIENT_SECRET e/o REDIRECT_URI
+NoneType: None
+2025-10-11 16:21:55,043 [ERROR] Errore nella creazione di credentials.json: [Errno 2] No such file or directory: './gmail_ingest/config/../gmail_ingest/config/credentials.json'
+Traceback (most recent call last):
+  File "C:\Users\UGA06690\Desktop\LAVORO\MYENV\chatbot-email\gmail_ingest\src\fetch_emails.py", line 53, in main
+    with open('./gmail_ingest/config/' + CREDENTIALS_FILE, 'w', encoding="utf-8") as f:
+         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: './gmail_ingest/config/../gmail_ingest/config/credentials.json'
+2025-10-11 16:23:40,464 [INFO] Avvio del modulo fetch_emails per il recupero delle email.
+2025-10-11 16:23:40,464 [ERROR] Variabili d'ambiente mancanti: CLIENT_ID, CLIENT_SECRET e/o REDIRECT_URI
+NoneType: None
+2025-10-11 16:25:21,466 [INFO] Avvio del modulo fetch_emails per il recupero delle email.
+2025-10-11 16:25:21,466 [ERROR] Variabili d'ambiente mancanti: CLIENT_ID, CLIENT_SECRET e/o REDIRECT_URI
+NoneType: None
+2025-10-11 16:25:27,111 [INFO] Avvio del modulo fetch_emails per il recupero delle email.
+2025-10-11 16:25:56,881 [INFO] Avvio del modulo fetch_emails per il recupero delle email.
+2025-10-11 16:27:28,728 [INFO] Avvio del modulo fetch_emails per il recupero delle email.
+2025-10-11 16:27:52,483 [INFO] Avvio del modulo fetch_emails per il recupero delle email.
+2025-10-11 16:29:24,336 [INFO] Avvio del modulo fetch_emails per il recupero delle email.
+2025-10-11 16:30:37,091 [INFO] Avvio del modulo fetch_emails per il recupero delle email.
+2025-10-11 16:30:37,092 [ERROR] Errore durante il recupero delle email: name 'TOKEN_FILE' is not defined
+Traceback (most recent call last):
+  File "C:\Users\UGA06690\Desktop\LAVORO\MYENV\chatbot-email\gmail_ingest\src\fetch_emails.py", line 23, in authenticate_gmail
+    if os.path.exists(TOKEN_FILE):
+                      ^^^^^^^^^^
+NameError: name 'TOKEN_FILE' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\UGA06690\Desktop\LAVORO\MYENV\chatbot-email\gmail_ingest\src\fetch_emails.py", line 72, in fetch_recent_emails
+    creds = authenticate_gmail()
+  File "C:\Users\UGA06690\Desktop\LAVORO\MYENV\chatbot-email\gmail_ingest\src\fetch_emails.py", line 27, in authenticate_gmail
+    logger.exception("Errore durante la lettura di %s: %s", TOKEN_FILE, e)
+                                                            ^^^^^^^^^^
+NameError: name 'TOKEN_FILE' is not defined
+2025-10-11 16:30:37,097 [WARNING] Nessuna email recuperata.
+2025-10-11 16:32:48,668 [INFO] Avvio del modulo fetch_emails per il recupero delle email.
+2025-10-11 16:32:48,681 [INFO] Token letto da file
+2025-10-11 16:32:49,184 [INFO] Token aggiornato con successo
+2025-10-11 16:32:49,185 [INFO] Token salvato su file
+2025-10-11 16:32:49,978 [INFO] Trovati 500 messaggi
+2025-10-11 16:34:37,887 [INFO] Email salvate su emails.json

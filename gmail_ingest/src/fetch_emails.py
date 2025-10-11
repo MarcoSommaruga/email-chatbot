@@ -3,72 +3,27 @@ import json
 import base64
 import datetime
 import logging
+import sys
 from email import message_from_bytes
 from dotenv import load_dotenv
 from google.auth.transport.requests import Request
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.oauth2.credentials import Credentials
 from googleapiclient.discovery import build
+sys.path.insert(1, './log/src')
+from log_utils import LogManager
 
-# Configurazione del logger con differenziazione dei livelli
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s [%(levelname)s] %(message)s",
-    handlers=[
-        logging.FileHandler("./log/logs/fetch_emails.log", encoding="utf-8"),
-        logging.StreamHandler()
-    ]
-)
-logger = logging.getLogger(__name__)
-
-def raiseException(e, msg=""):
-    # Uso di critical per errori da cui non ci si può recuperare
-    logger.critical(msg, exc_info=True)
-    raise e
-
-# Carica le variabili d'ambiente dal file .env
-load_dotenv()
-CLIENT_ID = os.getenv("CLIENT_ID")
-CLIENT_SECRET = os.getenv("CLIENT_SECRET")
-REDIRECT_URI = os.getenv("REDIRECT_URI")
-if not all([CLIENT_ID, CLIENT_SECRET, REDIRECT_URI]):
-    raiseException(Exception("Missing environment variables"),
-                   "Variabili d'ambiente mancanti: CLIENT_ID, CLIENT_SECRET e/o REDIRECT_URI")
-
-# Scopo per leggere le email
-SCOPES = ['https://www.googleapis.com/auth/gmail.readonly']
-
-# File token e credentials
-TOKEN_FILE = './gmail_ingest/config/token.json'
-CREDENTIALS_FILE = './gmail_ingest/config/credentials.json'
-
-# Crea il file credentials.json dinamicamente se non esiste
-if not os.path.exists(CREDENTIALS_FILE):
-    credentials_data = {
-        "installed": {
-            "client_id": CLIENT_ID,
-            "client_secret": CLIENT_SECRET,
-            "redirect_uris": [REDIRECT_URI],
-            "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-            "token_uri": "https://oauth2.googleapis.com/token"
-        }
-    }
-    try:
-        with open('./gmail_ingest/config/' + CREDENTIALS_FILE, 'w', encoding="utf-8") as f:
-            json.dump(credentials_data, f, indent=4)
-        logger.info("Creato il file credentials.json dinamicamente")
-    except Exception as e:
-        raiseException(e, "Errore nella creazione di credentials.json")
+logger = LogManager(__name__, "./log/logs/fetch_emails.log").get_logger()
 
 # Autenticazione OAuth2
-def authenticate_gmail():
+def authenticate_gmail(TOKEN_FILE, CREDENTIALS_FILE, SCOPES):
     creds = None
     try:
-        if os.path.exists('./gmail_ingest/config/' + TOKEN_FILE):
-            creds = Credentials.from_authorized_user_file('./gmail_ingest/config/' + TOKEN_FILE, SCOPES)
+        if os.path.exists(TOKEN_FILE):
+            creds = Credentials.from_authorized_user_file(TOKEN_FILE, SCOPES)
             logger.info("Token letto da file")
     except Exception as e:
-        raiseException(e, f"Errore durante la lettura di {TOKEN_FILE}")
+        logger.exception("Errore durante la lettura di %s: %s", TOKEN_FILE, e)
     
     try:
         if not creds or not creds.valid:
@@ -83,7 +38,7 @@ def authenticate_gmail():
                 token.write(creds.to_json())
                 logger.info("Token salvato su file")
     except Exception as e:
-        raiseException(e, "Errore nell'autenticazione")
+        logger.exception("Errore nell'autenticazione: %s", e)
     return creds
 
 # Estrai mittente, oggetto e corpo da un messaggio Gmail
@@ -110,10 +65,10 @@ def parse_email(msg):
         return {"from": "", "subject": "", "body": ""}
 
 # Scarica email dalle ultime 24 ore
-def fetch_recent_emails():
+def fetch_recent_emails(TOKEN_FILE, CREDENTIALS_FILE, SCOPES):
     emails = []
     try:
-        creds = authenticate_gmail()
+        creds = authenticate_gmail(TOKEN_FILE, CREDENTIALS_FILE, SCOPES)
         service = build('gmail', 'v1', credentials=creds)
         now = datetime.datetime.utcnow()
         yesterday = now - datetime.timedelta(days=100)
@@ -130,7 +85,7 @@ def fetch_recent_emails():
                 logger.warning("Errore nel recupero o parsing del messaggio con ID %s: %s", msg['id'], e, exc_info=True)
         return emails
     except Exception as e:
-        raiseException(e, "Errore durante il recupero delle email")
+        logger.exception("Errore durante il recupero delle email: %s", e)
 
 # Salva le email in un file JSON
 def save_emails_to_json(emails, filename="emails.json"):
@@ -139,20 +94,66 @@ def save_emails_to_json(emails, filename="emails.json"):
             json.dump(emails, f, ensure_ascii=False, indent=4)
         logger.info("Email salvate su %s", filename)
     except Exception as e:
-        raiseException(e, "Errore nel salvataggio delle email")
+        logger.exception("Errore nel salvataggio delle email: %s", e)
+
+
+def main():
+
+    try:  
+        logger.info("Avvio del modulo fetch_emails per il recupero delle email.")
+
+        # Carica le variabili d'ambiente dal file .env
+        load_dotenv(dotenv_path='./config/.env')
+        CLIENT_ID = os.getenv("CLIENT_ID")
+        CLIENT_SECRET = os.getenv("CLIENT_SECRET")
+        REDIRECT_URI = os.getenv("REDIRECT_URI")
+        if not all([CLIENT_ID, CLIENT_SECRET, REDIRECT_URI]):
+            logger.exception("Variabili d'ambiente mancanti: CLIENT_ID, CLIENT_SECRET e/o REDIRECT_URI")
+
+        # Scopo per leggere le email
+        SCOPES = ['https://www.googleapis.com/auth/gmail.readonly']
+
+        # File token e credentials
+        TOKEN_FILE = './gmail_ingest/config/token.json'
+        CREDENTIALS_FILE = './gmail_ingest/config/credentials.json'
+
+        # Crea il file credentials.json dinamicamente se non esiste
+        if not os.path.exists(CREDENTIALS_FILE):
+            credentials_data = {
+                "installed": {
+                    "client_id": CLIENT_ID,
+                    "client_secret": CLIENT_SECRET,
+                    "redirect_uris": [REDIRECT_URI],
+                    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+                    "token_uri": "https://oauth2.googleapis.com/token"
+                }
+            }
+            try:
+                with open(CREDENTIALS_FILE, 'w', encoding="utf-8") as f:
+                    json.dump(credentials_data, f, indent=4)
+                logger.info("Creato il file credentials.json dinamicamente")
+            except Exception as e:
+                logger.exception("Errore nella creazione di credentials.json: %s", e)
+        
+        # Recupera le email recenti e salvale in un file JSON
+        try:
+            emails = fetch_recent_emails(TOKEN_FILE, CREDENTIALS_FILE, SCOPES)
+            if emails:
+                save_emails_to_json(emails)
+                #for i, email in enumerate(emails, 1):
+                #    print(f"\nEmail {i}")
+                #    print(f"Da: {email['from']}")
+                #    print(f"Oggetto: {email['subject']}")
+                #    print(f"Corpo:\n{email['body']}")
+                print(len(emails), "email recuperate e salvate con successo.")
+            else:
+                logger.warning("Nessuna email recuperata.")
+        except Exception as main_e:
+            logger.error(main_e, "Errore critico nell'esecuzione dello script")
+
+    except Exception as e:
+            logger.exception("Errore durante l'esecuzione dello script di ricerca: %s", e)
+
 
 if __name__ == "__main__":
-    try:
-        emails = fetch_recent_emails()
-        if emails:
-            save_emails_to_json(emails)
-            #for i, email in enumerate(emails, 1):
-            #    print(f"\nEmail {i}")
-            #    print(f"Da: {email['from']}")
-            #    print(f"Oggetto: {email['subject']}")
-            #    print(f"Corpo:\n{email['body']}")
-            print(len(emails), "email recuperate e salvate con successo.")
-        else:
-            logger.warning("Nessuna email recuperata.")
-    except Exception as main_e:
-        raiseException(main_e, "Errore critico nell'esecuzione dello script")
+    main()

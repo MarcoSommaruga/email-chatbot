@@ -62,3 +62,47 @@ ModuleNotFoundError: No module named 'log'
 2025-10-10 00:00:15,933 [INFO] Chiamata al modulo di ricerca.
 2025-10-10 00:00:49,163 [INFO] Avvio modulo search: similarità query-emails.
 2025-10-10 00:00:57,138 [INFO] Chiamata al modulo di ricerca.
+2025-10-11 16:15:39,321 [INFO] Avvio modulo fetch_emails: recupero mail.
+2025-10-11 16:15:41,374 [ERROR] Errore nell'esecuzione dell'applicazione principale: Missing environment variables
+Traceback (most recent call last):
+  File "C:\Users\UGA06690\Desktop\LAVORO\MYENV\chatbot-email\gmail_ingest\src\__init__.py", line 13, in main
+    from fetch_emails import main as fetch_emails_main
+  File "C:\Users\UGA06690\Desktop\LAVORO\MYENV\chatbot-email\gmail_ingest\src\fetch_emails.py", line 35, in <module>
+    raiseException(Exception("Missing environment variables"),
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                   "Variabili d'ambiente mancanti: CLIENT_ID, CLIENT_SECRET e/o REDIRECT_URI")
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UGA06690\Desktop\LAVORO\MYENV\chatbot-email\gmail_ingest\src\fetch_emails.py", line 27, in raiseException
+    raise e
+Exception: Missing environment variables
+2025-10-11 16:21:01,774 [INFO] Avvio modulo fetch_emails: recupero mail.
+2025-10-11 16:21:02,341 [ERROR] Errore nell'esecuzione dell'applicazione principale: name 'sys' is not defined
+Traceback (most recent call last):
+  File "C:\Users\UGA06690\Desktop\LAVORO\MYENV\chatbot-email\gmail_ingest\src\__init__.py", line 13, in main
+    from fetch_emails import main as fetch_emails_main
+  File "C:\Users\UGA06690\Desktop\LAVORO\MYENV\chatbot-email\gmail_ingest\src\fetch_emails.py", line 12, in <module>
+    sys.path.insert(1, './log/src')
+    ^^^
+NameError: name 'sys' is not defined. Did you forget to import 'sys'?
+2025-10-11 16:21:20,362 [INFO] Avvio modulo fetch_emails: recupero mail.
+2025-10-11 16:21:20,895 [INFO] Chiamata al modulo di fetch delle email.
+2025-10-11 16:21:54,482 [INFO] Avvio modulo fetch_emails: recupero mail.
+2025-10-11 16:21:55,041 [INFO] Chiamata al modulo di fetch delle email.
+2025-10-11 16:23:39,900 [INFO] Avvio modulo fetch_emails: recupero mail.
+2025-10-11 16:23:40,464 [INFO] Chiamata al modulo di fetch delle email.
+2025-10-11 16:25:20,961 [INFO] Avvio modulo fetch_emails: recupero mail.
+2025-10-11 16:25:21,465 [INFO] Chiamata al modulo di fetch delle email.
+2025-10-11 16:25:26,583 [INFO] Avvio modulo fetch_emails: recupero mail.
+2025-10-11 16:25:27,111 [INFO] Chiamata al modulo di fetch delle email.
+2025-10-11 16:25:56,322 [INFO] Avvio modulo fetch_emails: recupero mail.
+2025-10-11 16:25:56,881 [INFO] Chiamata al modulo di fetch delle email.
+2025-10-11 16:27:28,195 [INFO] Avvio modulo fetch_emails: recupero mail.
+2025-10-11 16:27:28,728 [INFO] Chiamata al modulo di fetch delle email.
+2025-10-11 16:27:51,981 [INFO] Avvio modulo fetch_emails: recupero mail.
+2025-10-11 16:27:52,482 [INFO] Chiamata al modulo di fetch delle email.
+2025-10-11 16:29:23,735 [INFO] Avvio modulo fetch_emails: recupero mail.
+2025-10-11 16:29:24,336 [INFO] Chiamata al modulo di fetch delle email.
+2025-10-11 16:30:36,558 [INFO] Avvio modulo fetch_emails: recupero mail.
+2025-10-11 16:30:37,090 [INFO] Chiamata al modulo di fetch delle email.
+2025-10-11 16:32:48,145 [INFO] Avvio modulo fetch_emails: recupero mail.
+2025-10-11 16:32:48,667 [INFO] Chiamata al modulo di fetch delle email.
